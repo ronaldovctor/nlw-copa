@@ -1,10 +1,14 @@
-import Fastify from "fastify"
+import Fastify from 'fastify'
 
 async function bootstrap() {
-   const fastify = Fastify({
-      logger: true
-   })
+	const fastify = Fastify({
+		logger: true,
+	})
 
-   await fastify.listen({port: 5000})
+	fastify.get('/pools/count', () => {
+		return { count: 0 }
+	})
+
+	await fastify.listen({ port: 5000 })
 }
 bootstrap()

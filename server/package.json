@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deev": "tsx src/server.ts"
+    "deev": "tsx watch src/server.ts"
   },
   "keywords": [],
   "author": "",

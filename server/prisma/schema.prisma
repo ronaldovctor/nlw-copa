@@ -15,7 +15,7 @@ datasource db {
 }
 
 model Pool {
-  id        String   @id @default(cuid()) // generate unique id
+  id        String   @id @default(cuid()) // Generate unique id
   title     String
   code      String   @unique
   createdAt DateTime @default(now())

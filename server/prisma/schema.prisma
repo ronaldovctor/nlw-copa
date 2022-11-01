@@ -52,7 +52,7 @@ model User {
 
 model Game {
   id                    String   @id @default(cuid())
-  data                  DateTime
+  date                  DateTime
   firstTeamCountryCode  String
   secondTeamCountryCode String
 

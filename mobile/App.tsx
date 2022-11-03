@@ -7,11 +7,8 @@ import {
 	Roboto_700Bold,
 } from '@expo-google-fonts/roboto'
 import { Loading } from './src/components/Loading'
-import { SignIn } from './src/screens/SignIn'
 import { AuthContextProvider } from './src/context/AuthContext'
-import { New } from './src/screens/New'
-import { Find } from './src/screens/Find'
-import { Pools } from './src/screens/Pools'
+import { Routes } from './src/routes'
 
 export default function App() {
 	const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_500Medium, Roboto_700Bold })
@@ -24,7 +21,7 @@ export default function App() {
 					backgroundColor="transparent"
 					translucent
 				/>
-				{!fontsLoaded ? <Loading /> : <SignIn />}
+				{!fontsLoaded ? <Loading /> : <Routes />}
 			</AuthContextProvider>
 		</NativeBaseProvider>
 	)

@@ -2,7 +2,6 @@ import { createContext, ReactNode, useState, useEffect } from 'react'
 import * as Google from 'expo-auth-session/providers/google'
 import * as AuthSession from 'expo-auth-session'
 import * as WebBrowser from 'expo-web-browser'
-import { consts } from '../../consts'
 import { api } from '../services/api'
 
 WebBrowser.maybeCompleteAuthSession()
@@ -29,7 +28,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
 	const [isUserLoading, setIsUserLoading] = useState(false)
 
 	const [request, response, promptAsync] = Google.useAuthRequest({
-		clientId: consts.CLIENT_ID,
+		clientId: process.env.CLIENT_ID,
 		redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
 		scopes: ['profile', 'email'],
 	})

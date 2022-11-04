@@ -52,6 +52,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
 			const tokenReponse = await api.post('/users', {
 				access_token,
 			})
+			// Set token in all requisitions
 			api.defaults.headers.common[
 				'Authorization'
 			] = `Bearer ${tokenReponse.data.token}`

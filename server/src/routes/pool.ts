@@ -74,7 +74,7 @@ export async function poolRoutes(fastify: FastifyInstance) {
 
 			if (!pool) {
 				return reply.status(400).send({
-					message: 'Poll not found',
+					message: 'Poll not found.',
 				})
 			}
 
